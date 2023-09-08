@@ -1,0 +1,73 @@
+/* 全局樣式 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e5c1e5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e5c1e5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 首頁樣式 */
+#diaryCards div {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e5c1e5;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #c1e2dd;
+    transition: background-color 0.3s;
+}
+
+#diaryCards div:hover {
+    background-color: #f0f8af;
+}
+
+/* 日記頁樣式 */
+#diaryPage {
+    display: none; /* 預設是隱藏的 */
+}
+
+#viewMode, #editMode {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#editMode {
+    display: none; /* 預設是隱藏的 */
+}
+
+textarea#diaryEditText {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+/* 按鈕樣式 */
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f8ff;
+}
+
+button:active {
+    background-color: #dcdcdc;
+}

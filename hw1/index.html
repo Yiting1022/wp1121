@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <h1>My Diary</h1>
+
+    <button onclick="openNewDiary()">新增日記卡</button>
+
+    <div id="diaryCards">
+        <!-- Diary cards will be displayed here -->
+    </div>
+
+    <div id="diaryPage" style="display: none;">
+        <div id="viewMode">
+            <div id="diaryContent"></div>
+            <button onclick="switchToEditMode()">編輯</button>
+        </div>
+        <div id="editMode" style="display: none;">
+            <textarea id="diaryEditText"></textarea><br>
+            <label>標籤:</label>
+            <select id="tags">
+                <option value="學業">學業</option>
+                <option value="人際">人際</option>
+                <option value="社團">社團</option>
+            </select><br>
+            <label>心情:</label>
+            <select id="moods">
+                <option value="快樂">快樂</option>
+                <option value="生氣">生氣</option>
+                <option value="難過">難過</option>
+            </select><br>
+            <button onclick="saveDiary()">儲存</button>
+            <button onclick="cancelEdit()">取消</button>
+        </div>
+    </div>
+
+    <script src="diaryApp.js"></script>
+</body>
+</html>
+
