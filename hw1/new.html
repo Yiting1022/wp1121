@@ -9,6 +9,20 @@
 <body>
 
 <h1>My Diary</h1>
+<label for="filterTag">尋找標籤:</label>
+<select id="filterTag" onchange="filterByTag()">
+    <option value="all" selected>所有標籤</option>
+    <option value="學業">學業</option>
+    <option value="人際">人際</option>
+    <option value="社團">社團</option> 
+</select>
+<label for="filterMood">尋找心情:</label>
+<select id="filterMood" onchange="filterByTag()">
+    <option value="all" selected>所有心情</option>
+    <option value="快樂">快樂</option>
+    <option value="生氣">生氣</option>
+    <option value="難過">難過</option>
+</select>
 <div id="diaryList">
     <!-- 日記卡片將在此顯示 -->
 </div>
@@ -20,13 +34,18 @@
     <select id="diaryTag" required>
         <option value="學業">學業</option>
         <option value="人際">人際</option>
-        <option value="社團">社團</option>
+        <option value="社團">社團</option> 
     </select>
     <select id="diaryMood" required>
         <option value="快樂">快樂</option>
         <option value="生氣">生氣</option>
         <option value="難過">難過</option>
     </select>
+    <button onclick="addNewTagOption()">新增標籤</button>
+    <input type="text" id="newTagInput" placeholder="新增標籤">
+    <button onclick="addNewMoodOption()">新增心情</button>
+    <input type="text" id="newMoodInput" placeholder="新增心情">
+
     <textarea id="diaryContent" rows="10" placeholder="輸入日記..."></textarea>
     <button onclick="saveDiary()">儲存</button>
     <button onclick="cancelDiary()">取消</button>
